@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class OgrenciNotSistemi {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Kullanıcıdan ders notlarını alıyoruz
+        System.out.println("Lütfen Matematik notunu girin:");
+        int matematik = scanner.nextInt();
+        System.out.println("Lütfen Fizik notunu girin:");
+        int fizik = scanner.nextInt();
+        System.out.println("Lütfen Kimya notunu girin:");
+        int kimya = scanner.nextInt();
+        System.out.println("Lütfen Biyoloji notunu girin:");
+        int biyoloji = scanner.nextInt();
+
+        // Notların ortalamasını hesapla
+        double ortalama = (matematik + fizik + kimya + biyoloji) / 4.0;
+
+        // Ortalama notuna göre geçti mi kaldı mı yoksa onur belgesi mi aldığını belirle
+        if (ortalama >= 85) {
+            System.out.println("Ortalama: " + ortalama + " - Onur Belgesi");
+        } else if (ortalama >= 60) {
+            System.out.println("Ortalama: " + ortalama + " - Geçti");
+        } else {
+            System.out.println("Ortalama: " + ortalama + " - Kaldı");
+        }
+
+        
+        scanner.close();
+    }
+}
